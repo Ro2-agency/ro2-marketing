@@ -1,0 +1,735 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="RO2 Marketing - حلول تسويقية متكاملة، صناعة المحتوى، إدارة الحملات الإعلانية وبناء العلامات التجارية في الإمارات والخليج.">
+<meta name="theme-color" content="#101010">
+<title>RO2 Marketing | نصنع حضورك ونقود نموك</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --black: #101010;
+  --dark: #171717;
+  --red: #ed1c35;
+  --white: #ffffff;
+  --gray: #a5a5a5;
+  --border: rgba(255,255,255,.1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.8;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  width: min(1160px, 90%);
+  margin: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(16,16,16,.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.logo span { color: var(--red); }
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #ccc;
+  font-size: 13px;
+  transition: .2s;
+}
+
+nav a:hover { color: var(--red); }
+
+.nav-cta, .btn {
+  background: var(--red);
+  color: white;
+  padding: 12px 23px;
+  border-radius: 5px;
+  font-weight: 700;
+  display: inline-block;
+  transition: .25s;
+}
+
+.nav-cta:hover, .btn:hover {
+  background: #c90f28;
+  transform: translateY(-2px);
+}
+
+.hero {
+  min-height: 660px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 15% 55%, rgba(237,28,53,.22), transparent 42%),
+    linear-gradient(120deg,#101010,#171717);
+}
+
+.hero-content {
+  max-width: 780px;
+  padding: 100px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  color: var(--red);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 7vw, 76px);
+  line-height: 1.35;
+  margin: 22px 0;
+  font-weight: 900;
+}
+
+.hero h1 span { color: var(--red); }
+
+.hero p {
+  max-width: 620px;
+  color: #b7b7b7;
+  font-size: 17px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.btn-outline {
+  border: 1px solid #555;
+  padding: 11px 22px;
+  border-radius: 5px;
+  color: white;
+}
+
+section { padding: 100px 0; }
+
+.section-heading {
+  margin-bottom: 42px;
+  max-width: 720px;
+}
+
+.section-heading h2 {
+  font-size: clamp(30px, 5vw, 45px);
+  line-height: 1.4;
+  margin: 12px 0;
+}
+
+.section-heading p { color: var(--gray); }
+
+.red { color: var(--red); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.about-copy p {
+  color: #aaa;
+  margin: 18px 0;
+}
+
+.about-visual {
+  min-height: 340px;
+  background: linear-gradient(145deg,#262626,#121212);
+  border: 1px solid var(--border);
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-visual strong {
+  font-size: 100px;
+  font-weight: 900;
+  color: var(--red);
+  opacity: .9;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.stat {
+  padding: 20px;
+  background: #1b1b1b;
+  border-right: 3px solid var(--red);
+}
+
+.stat strong {
+  display: block;
+  font-size: 27px;
+  color: var(--red);
+}
+
+.stat small { color: #aaa; }
+
+.services-grid, .sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 17px;
+}
+
+.service, .sector {
+  background: var(--dark);
+  border: 1px solid var(--border);
+  padding: 28px;
+  border-radius: 8px;
+  transition: .25s;
+}
+
+.service:hover, .sector:hover {
+  border-color: var(--red);
+  transform: translateY(-5px);
+}
+
+.service-number {
+  color: var(--red);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.service h3 { margin: 12px 0; font-size: 20px; }
+
+.service p, .sector p {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.dark-section { background: #171717; }
+
+.portfolio-tabs {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.tab {
+  padding: 9px 22px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.tab.active {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.portfolio-card {
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.portfolio-card[hidden] { display: none; }
+
+.portfolio-image {
+  min-height: 220px;
+  background:
+    linear-gradient(135deg,rgba(237,28,53,.4),transparent),
+    linear-gradient(145deg,#333,#171717);
+  display: grid;
+  place-items: center;
+  font-size: 48px;
+  color: #fff;
+}
+
+.portfolio-info { padding: 20px; }
+
+.portfolio-info h3 { font-size: 17px; }
+
+.portfolio-info p {
+  color: var(--gray);
+  font-size: 13px;
+}
+
+.portfolio-info a {
+  display: inline-block;
+  color: var(--red);
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+}
+
+.result-card {
+  padding: 28px;
+  background: #1b1b1b;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.result-card .result-number {
+  font-size: 34px;
+  font-weight: 900;
+  color: var(--red);
+}
+
+.result-card p { color: #aaa; font-size: 14px; }
+
+.result-note {
+  margin-top: 25px;
+  color: #888;
+  font-size: 12px;
+}
+
+.sector {
+  text-align: center;
+  padding: 23px 12px;
+}
+
+.sector span {
+  color: var(--red);
+  font-size: 25px;
+}
+
+.sector h3 { font-size: 16px; margin-top: 8px; }
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 18px;
+}
+
+.why-item {
+  padding: 24px;
+  border-right: 3px solid var(--red);
+  background: #1b1b1b;
+}
+
+.why-item h3 { margin-bottom: 8px; }
+
+.why-item p { color: #aaa; font-size: 14px; }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 16px;
+}
+
+.step {
+  padding: 24px 15px;
+  border-top: 3px solid var(--red);
+  background: #1b1b1b;
+}
+
+.step strong {
+  color: var(--red);
+  font-size: 25px;
+}
+
+.step p { color: #aaa; font-size: 14px; }
+
+.contact-section {
+  background:
+    radial-gradient(ellipse at 80% 40%,rgba(237,28,53,.2),transparent 50%),
+    #171717;
+}
+
+.contact-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.contact-details p {
+  color: #aaa;
+  margin: 15px 0;
+}
+
+.contact-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.contact-links a {
+  border: 1px solid #555;
+  border-radius: 5px;
+  padding: 10px 17px;
+}
+
+footer {
+  padding: 35px 0;
+  border-top: 1px solid var(--border);
+  color: #888;
+  font-size: 13px;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media(max-width:800px) {
+  .nav { padding: 15px 0; flex-direction: column; }
+  nav { justify-content: center; gap: 12px; }
+  .about-grid, .contact-box { grid-template-columns: 1fr; }
+  .services-grid, .sectors-grid, .portfolio-grid, .results-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .steps { grid-template-columns: repeat(2,1fr); }
+}
+
+@media(max-width:520px) {
+  section { padding: 70px 0; }
+  .services-grid, .sectors-grid, .portfolio-grid, .results-grid,
+  .stats, .why-grid, .steps { grid-template-columns: 1fr; }
+  .hero { min-height: 570px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">RO<span>2</span>.</a>
+    <nav>
+      <a href="#about">من نحن</a>
+      <a href="#services">خدماتنا</a>
+      <a href="#portfolio">أعمالنا</a>
+      <a href="#results">نتائجنا</a>
+      <a href="#sectors">القطاعات</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
+    <a class="nav-cta" href="#contact">ابدأ مشروعك</a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">RO2 MARKETING AGENCY</div>
+      <h1>نصنع حضورك،<br>ونقود <span>نمو أعمالك.</span></h1>
+      <p>
+        نربط بين الاستراتيجية والإبداع والتسويق الرقمي،
+        لنساعد علامتك التجارية على الوصول لجمهورها
+        وتحقيق أهدافها بخطوات مدروسة.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="#portfolio">شوف أعمالنا</a>
+        <a class="btn-outline" href="#contact">تواصل مع فريقنا</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-copy">
+      <div class="eyebrow">من نحن</div>
+      <h2 class="section-heading">
+        أكثر من مجرد وكالة تسويق...<br>
+        <span class="red">شريك في نجاحك.</span>
+      </h2>
+      <p>
+        في RO2 Marketing نؤمن أن التسويق الناجح يبدأ بفهم
+        نشاطك التجاري، وجمهورك، وأهدافك.
+      </p>
+      <p>
+        نمتلك خبرة تمتد لأكثر من 10 سنوات في مجال التسويق
+        والعمل مع قطاعات متنوعة، ونقدم حلولاً متكاملة
+        تجمع بين التخطيط وصناعة المحتوى والإعلانات وتحليل الأداء.
+      </p>
+      <p>
+        هدفنا أن يكون لكل خطوة تسويقية قيمة واضحة،
+        ولكل قرار أساس من البيانات.
+      </p>
+      <a class="btn" href="#contact">خلّنا نتعرف على مشروعك</a>
+    </div>
+
+    <div class="about-visual">
+      <strong>RO2</strong>
+    </div>
+  </div>
+
+  <div class="container stats">
+    <div class="stat"><strong>10+</strong><small>سنوات من الخبرة</small></div>
+    <div class="stat"><strong>360°</strong><small>حلول تسويقية متكاملة</small></div>
+    <div class="stat"><strong>متنوع</strong><small>قطاعات وأسواق مختلفة</small></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="dark-section" id="services">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">خدماتنا</div>
+      <h2>كل ما يحتاجه مشروعك <span class="red">للنمو.</span></h2>
+      <p>من أول فكرة إلى قياس النتائج، نعمل على ربط كل عناصر التسويق في منظومة واحدة.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service"><span class="service-number">01</span><h3>الاستراتيجية التسويقية</h3><p>تحليل السوق والمنافسين، تحديد الجمهور، وبناء خطة تناسب أهداف نشاطك.</p></div>
+      <div class="service"><span class="service-number">02</span><h3>إدارة منصات التواصل</h3><p>إدارة الحسابات، التخطيط للمحتوى، وجدولة النشر ومتابعة الأداء.</p></div>
+      <div class="service"><span class="service-number">03</span><h3>صناعة المحتوى</h3><p>كتابة المحتوى الإبداعي وصناعة الأفكار التي تعكس هوية علامتك.</p></div>
+      <div class="service"><span class="service-number">04</span><h3>التصوير والإنتاج</h3><p>تصوير المنتجات والخدمات والفيديوهات الإعلانية وإنتاج الريلز.</p></div>
+      <div class="service"><span class="service-number">05</span><h3>الحملات الإعلانية</h3><p>إدارة وتحسين الحملات على منصات Meta وGoogle وغيرها حسب نشاطك.</p></div>
+      <div class="service"><span class="service-number">06</span><h3>الهوية التجارية والتصميم</h3><p>بناء الهوية البصرية وتصميم المواد التسويقية والإعلانية.</p></div>
+      <div class="service"><span class="service-number">07</span><h3>تصميم وتطوير المواقع</h3><p>مواقع تعريفية وتجارب رقمية تساعد العملاء على اكتشاف خدماتك.</p></div>
+      <div class="service"><span class="service-number">08</span><h3>تحليل الأداء والتقارير</h3><p>قراءة البيانات وقياس المؤشرات وتطوير الحملات باستمرار.</p></div>
+      <div class="service"><span class="service-number">09</span><h3>التسويق بالمؤثرين</h3><p>تخطيط التعاون مع صناع المحتوى بما يناسب جمهور علامتك.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">معرض أعمالنا</div>
+      <h2>الإبداع يتكلم <span class="red">عن نفسه.</span></h2>
+      <p>مجموعة من المشاريع والأعمال الإبداعية التي نفذناها لعلامات تجارية في قطاعات مختلفة.</p>
+    </div>
+
+    <div class="portfolio-tabs">
+      <button class="tab active" data-filter="all">كل الأعمال</button>
+      <button class="tab" data-filter="video">الفيديوهات</button>
+      <button class="tab" data-filter="design">التصميمات</button>
+    </div>
+
+    <div class="portfolio-grid">
+      <article class="portfolio-card" data-category="video">
+        <div class="portfolio-image">▶</div>
+        <div class="portfolio-info"><h3>فيديوهات إعلانية</h3><p>ضع هنا فيديو من أعمالك</p><a href="#">أضف رابط الفيديو ←</a></div>
+      </article>
+
+      <article class="portfolio-card" data-category="video">
+        <div class="portfolio-image">▶</div>
+        <div class="portfolio-info"><h3>إنتاج الريلز</h3><p>ضع هنا مشروع تصوير ومونتاج</p><a href="#">أضف رابط الفيديو ←</a></div>
+      </article>
+
+      <article class="portfolio-card" data-category="video">
+        <div class="portfolio-image">▶</div>
+        <div class="portfolio-info"><h3>محتوى العلامات التجارية</h3><p>ضع هنا فيديو تعريفي</p><a href="#">أضف رابط الفيديو ←</a></div>
+      </article>
+
+      <article class="portfolio-card" data-category="design">
+        <div class="portfolio-image">✦</div>
+        <div class="portfolio-info"><h3>تصميمات السوشيال ميديا</h3><p>ضع هنا نماذج من التصميمات</p><a href="#">أضف رابط المشروع ←</a></div>
+      </article>
+
+      <article class="portfolio-card" data-category="design">
+        <div class="portfolio-image">✦</div>
+        <div class="portfolio-info"><h3>الهوية البصرية</h3><p>ضع هنا مشروع هوية تجارية</p><a href="#">أضف رابط المشروع ←</a></div>
+      </article>
+
+      <article class="portfolio-card" data-category="design">
+        <div class="portfolio-image">✦</div>
+        <div class="portfolio-info"><h3>الحملات الإبداعية</h3><p>ضع هنا تصميمات الحملات</p><a href="#">أضف رابط المشروع ←</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="dark-section" id="results">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">نتائج الحملات</div>
+      <h2>الأرقام توضح <span class="red">التأثير.</span></h2>
+      <p>نؤمن أن نجاح التسويق لا يُقاس بالشكل فقط، بل بالأثر الذي يحققه على أهداف العمل.</p>
+    </div>
+
+    <div class="results-grid">
+      <div class="result-card"><div class="result-number">أضف الرقم</div><h3>عدد العملاء المحتملين</h3><p>اسم المشروع والفترة الزمنية للحملة.</p></div>
+      <div class="result-card"><div class="result-number">أضف الرقم</div><h3>تكلفة الحصول على العميل</h3><p>متوسط تكلفة الـLead أو العميل حسب بيانات الحملة.</p></div>
+      <div class="result-card"><div class="result-number">أضف الرقم</div><h3>العائد على الإنفاق الإعلاني</h3><p>نتيجة موثقة من لوحة الإعلانات أو بيانات العميل.</p></div>
+    </div>
+    <p class="result-note">ملاحظة: هذه خانات مخصصة لنتائج حملات حقيقية. يجب إضافة الأرقام بعد التحقق منها، مع ذكر فترة القياس وطبيعة كل نتيجة.</p>
+  </div>
+</section>
+
+<!-- SECTORS -->
+<section id="sectors">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">القطاعات التي نخدمها</div>
+      <h2>خبرات متنوعة، وحلول تناسب <span class="red">كل نشاط.</span></h2>
+      <p>نبدأ بفهم طبيعة كل قطاع، ثم نصمم له استراتيجية تناسب جمهوره وتحدياته.</p>
+    </div>
+
+    <div class="sectors-grid">
+      <div class="sector"><span>✦</span><h3>العقارات والتطوير</h3></div>
+      <div class="sector"><span>✦</span><h3>المطاعم والضيافة</h3></div>
+      <div class="sector"><span>✦</span><h3>القطاع الطبي والعيادات</h3></div>
+      <div class="sector"><span>✦</span><h3>السياحة والسفر</h3></div>
+      <div class="sector"><span>✦</span><h3>التجارة الإلكترونية</h3></div>
+      <div class="sector"><span>✦</span><h3>المجوهرات والمنتجات الفاخرة</h3></div>
+      <div class="sector"><span>✦</span><h3>التعليم والتدريب</h3></div>
+      <div class="sector"><span>✦</span><h3>الصناعة والشركات التجارية</h3></div>
+      <div class="sector"><span>✦</span><h3>المقاولات والهندسة</h3></div>
+      <div class="sector"><span>✦</span><h3>الأمن والأنظمة الذكية</h3></div>
+      <div class="sector"><span>✦</span><h3>اللياقة والصحة</h3></div>
+      <div class="sector"><span>✦</span><h3>الخدمات المهنية</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="dark-section">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">لماذا RO2؟</div>
+      <h2>شريك يفهم أهدافك، وليس مجرد <span class="red">منفذ مهام.</span></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item"><h3>نفهم نشاطك أولاً</h3><p>نحلل طبيعة عملك وجمهورك قبل اقتراح أي حل تسويقي.</p></div>
+      <div class="why-item"><h3>كل شيء يعمل معاً</h3><p>نربط الاستراتيجية والمحتوى والإعلانات لتحقيق أهداف واضحة.</p></div>
+      <div class="why-item"><h3>قرارات مبنية على البيانات</h3><p>نراجع الأداء ونطور العمل بناءً على الأرقام.</p></div>
+      <div class="why-item"><h3>تواصل واضح ومستمر</h3><p>نعمل بخطة ومواعيد ومتابعة وتقارير دورية.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section>
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">طريقة عملنا</div>
+      <h2>من الفكرة إلى <span class="red">النتيجة.</span></h2>
+      <p>خطوات واضحة تساعدنا على بناء شراكة ناجحة مع كل عميل.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><strong>01</strong><h3>نفهم</h3><p>نتعرف على نشاطك وأهدافك وتحدياتك.</p></div>
+      <div class="step"><strong>02</strong><h3>نخطط</h3><p>نضع الاستراتيجية والخطة المناسبة.</p></div>
+      <div class="step"><strong>03</strong><h3>ننّفذ</h3><p>ننتج المحتوى ونطلق الأنشطة التسويقية.</p></div>
+      <div class="step"><strong>04</strong><h3>نطوّر</h3><p>نقيس النتائج ونحسن الأداء باستمرار.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container contact-box">
+    <div>
+      <div class="eyebrow">خلّنا نتواصل</div>
+      <h2 class="section-heading">جاهز تنقل مشروعك <span class="red">للمستوى التالي؟</span></h2>
+      <p class="muted">شاركنا فكرة مشروعك، وخلّنا نناقش كيف نقدر نساعدك في تحقيق أهدافك.</p>
+      <div class="contact-links">
+        <a href="https://wa.me/201017356781" target="_blank">واتساب</a>
+        <a href="mailto:hello@ro2marketing.com">البريد الإلكتروني</a>
+      </div>
+    </div>
+    <div class="contact-details">
+      <h3>RO2 Marketing</h3>
+      <p>حلول تسويقية متكاملة لنمو أعمالك.</p>
+      <p>📍 مصر | نخدم الشركات في الإمارات والخليج</p>
+      <p>📞 +20 101 735 6781</p>
+      <p>✉ hello@ro2marketing.com</p>
+      <p>تابعنا على منصات التواصل</p>
+      <div class="contact-links">
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank">Facebook</a>
+        <a href="#" target="_blank">LinkedIn</a>
+        <a href="#" target="_blank">TikTok</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <div class="logo">RO<span>2</span>.</div>
+    <p>© 2026 RO2 Marketing. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+<script>
+const tabs = document.querySelectorAll('.tab');
+const cards = document.querySelectorAll('.portfolio-card');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(item => item.classList.remove('active'));
+    tab.classList.add('active');
+
+    const filter = tab.dataset.filter;
+
+    cards.forEach(card => {
+      card.hidden = filter !== 'all' && card.dataset.category !== filter;
+    });
+  });
+});
+</script>
+
+</body>
+</html>
