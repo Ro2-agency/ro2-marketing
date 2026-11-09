@@ -286,27 +286,30 @@ section { padding: 100px 0; }
 
 .portfolio-card[hidden] { display: none; }
 
-.portfolio-image {
-    width: 100%;
-    height: auto;
-    min-height: 0;
-    background: transparent;
-    overflow: visible;
-    display: block;
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
 }
 
-.portfolio-image img {
+.portfolio-card {
     width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
+    align-self: start;
+}
+
+.portfolio-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
 }
 
 .portfolio-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
     display: block;
+    object-fit: cover;
+}
 }<article class="portfolio-card" data-category="design">
     <div class="portfolio-image">
         <img src="487216695_652138637594140_3509987788040341182_n.jpg" alt="RO2 Portfolio">
