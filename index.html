@@ -544,6 +544,56 @@ footer {
         bottom: 15px;
         right: 15px;
     }
+}/* Portfolio Layout Fix */
+.portfolio-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 25px !important;
+    align-items: start;
+    width: 100%;
+}
+
+.portfolio-card {
+    width: 100% !important;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #111;
+}
+
+.portfolio-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #111;
+    overflow: hidden;
+}
+
+.portfolio-image img,
+.portfolio-card > img {
+    width: 100% !important;
+    height: 100% !important;
+    aspect-ratio: 4 / 3;
+    object-fit: contain !important;
+    display: block;
+}
+
+.portfolio-info {
+    padding: 12px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr !important;
+    }
 }</style>
 </head>
 
