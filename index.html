@@ -550,9 +550,55 @@ footer {
 .portfolio-grid {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 25px !important;
+    gap: 24px !important;
     align-items: start;
+    width: 92% !important;
+    max-width: 1200px !important;
+    margin: 30px auto !important;
+}
+
+.portfolio-card {
+    width: 100% !important;
+    min-width: 0;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: transparent;
+}
+
+.portfolio-image {
     width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #111;
+}
+
+.portfolio-image img,
+.portfolio-card > img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block;
+}
+
+.portfolio-info {
+    padding: 12px 5px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
 }
 
 .portfolio-card {
