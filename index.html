@@ -183,7 +183,7 @@ section { padding: 100px 0; }
   border: 1px solid var(--border);
   display: grid;
   place-items: center;
-  border-radius: 12px;.portfolio-grid {
+  border-radius: 12px;
   position: relative;
   overflow: hidden;
 }
@@ -273,13 +273,11 @@ section { padding: 100px 0; }
 }
 
 .portfolio-grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 24px !important;
-    width: 92% !important;
-    max-width: 1200px !important;
-    margin: 30px auto !important;
+    column-count: 3;
+    column-gap: 18px;
+    width: 100%;
 }
+
 .portfolio-card {
     display: inline-block;
     width: 100%;
@@ -546,102 +544,6 @@ footer {
         bottom: 15px;
         right: 15px;
     }
-}/* Portfolio Layout Fix */
-.portfolio-grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 24px !important;
-    align-items: start;
-    width: 92% !important;
-    max-width: 1200px !important;
-    margin: 30px auto !important;
-}
-
-.portfolio-card {
-    width: 100% !important;
-    min-width: 0;
-    margin: 0 !important;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    background: transparent;
-}
-
-.portfolio-image {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-    background: #111;
-}
-
-.portfolio-image img,
-.portfolio-card > img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    display: block;
-}
-
-.portfolio-info {
-    padding: 12px 5px;
-    text-align: center;
-}
-
-@media (max-width: 768px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        gap: 14px !important;
-    }
-}
-
-@media (max-width: 480px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        gap: 10px !important;
-    }
-}
-
-.portfolio-card {
-    width: 100% !important;
-    margin: 0 !important;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    background: #111;
-}
-
-.portfolio-image {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    background: #111;
-    overflow: hidden;
-}
-
-.portfolio-image img,
-.portfolio-card > img {
-    width: 100% !important;
-    height: 100% !important;
-    aspect-ratio: 4 / 3;
-    object-fit: contain !important;
-    display: block;
-}
-
-.portfolio-info {
-    padding: 12px;
-    text-align: center;
-}
-
-@media (max-width: 768px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        gap: 12px !important;
-    }
-}
-
-@media (max-width: 480px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr !important;
-    }
 }</style>
 </head>
 
@@ -773,8 +675,7 @@ footer {
     <div class="portfolio-info">
         <h3>New Project</h3>
         <p>Creative Design & Marketing Campaign</p>
-   <!-- NEW PROJECTS -->
-
+    </div>
 </article>
         <!-- Project 1 -->
 <article class="portfolio-card" data-category="design">
