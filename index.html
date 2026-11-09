@@ -298,17 +298,38 @@ section { padding: 100px 0; }
     align-self: start;
 }
 
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+.portfolio-card {
+    width: 100%;
+    background: transparent;
+    border-radius: 0;
+    overflow: visible;
+}
+
+.portfolio-card[hidden] {
+    display: none;
+}
+
 .portfolio-image {
     width: 100%;
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
+    height: auto;
+    min-height: 0;
+    background: transparent;
+    overflow: visible;
+    display: block;
 }
 
 .portfolio-image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
 }
 }<article class="portfolio-card" data-category="design">
     <div class="portfolio-image">
