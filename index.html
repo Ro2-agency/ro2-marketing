@@ -94,11 +94,72 @@ nav a:hover { color: var(--red); }
 }
 
 .hero {
-  min-height: 660px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: #101010;
+}
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.video-sound-btn {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    z-index: 5;
+    background: #e91e3a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 85vh;
+    }
+
+    .hero-video {
+        object-position: center;
+    }
+
+    .video-sound-btn {
+        bottom: 15px;
+        right: 15px;
+    }
+}
   background:
     radial-gradient(ellipse at 15% 55%, rgba(237,28,53,.22), transparent 42%),
     linear-gradient(120deg,#101010,#171717);
@@ -493,7 +554,18 @@ footer {
 }
 </style>
 </head>
+<script>
+const heroVideo = document.getElementById("heroVideo");
+const soundBtn = document.getElementById("videoSoundBtn");
 
+soundBtn.addEventListener("click", function () {
+    heroVideo.muted = !heroVideo.muted;
+
+    soundBtn.textContent = heroVideo.muted
+        ? "🔇 تشغيل الصوت"
+        : "🔊 كتم الصوت";
+});
+</script>
 <body>
 
 <header>
@@ -514,10 +586,13 @@ footer {
 <main>
 
 <!-- HERO -->
-<div class="hero">
- <video class="hero-video" autoplay muted loop playsinline>
+<video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
     <source src="1109%20(1)%20(1).mp4" type="video/mp4">
 </video>
+
+<button class="video-sound-btn" id="videoSoundBtn" type="button">
+    🔇 تشغيل الصوت
+</button>
   <div class="container">
     <div class="hero-content">
       <div class="eyebrow">RO2 MARKETING AGENCY</div>
