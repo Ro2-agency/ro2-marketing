@@ -517,6 +517,33 @@ footer {
     border: 1px solid #fff;
     color: #fff;
     text-decoration: none;
+}.sound-toggle {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 12px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sound-toggle:hover {
+    background: #ed1c35;
+}
+
+@media (max-width: 768px) {
+    .hero-video {
+        min-height: 500px;
+    }
+
+    .sound-toggle {
+        bottom: 15px;
+        right: 15px;
+    }
 }</style>
 </head>
 
@@ -541,7 +568,7 @@ footer {
 
 <!-- HERO VIDEO -->
 <div class="hero-video">
-    <video autoplay muted loop playsinline>
+    <video id="showreel" autoplay muted loop playsinline>
         <source src="1109 (1) (1).mp4" type="video/mp4">
     </video>
 
@@ -552,6 +579,10 @@ footer {
             <a href="#portfolio" class="btn">Explore Our Work</a>
         </div>
     </div>
+
+    <button class="sound-toggle" id="sound-toggle" onclick="toggleVideoSound()">
+        🔇 Unmute Sound
+    </button>
 </div>
 <!-- ABOUT -->
 <section id="about">
@@ -885,5 +916,16 @@ tabs.forEach(tab => {
 });
 </script>
 
-</body>
+<script>
+function toggleVideoSound() {
+    const video = document.getElementById('showreel');
+    const button = document.getElementById('sound-toggle');
+
+    video.muted = !video.muted;
+
+    button.innerHTML = video.muted
+        ? '🔇 Unmute Sound'
+        : '🔊 Mute Sound';
+}
+</script></body>
 </html>
