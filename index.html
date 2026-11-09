@@ -287,16 +287,21 @@ section { padding: 100px 0; }
 .portfolio-card[hidden] { display: none; }
 
 .portfolio-image {
-  min-height: 220px;
-  background:
-    linear-gradient(135deg,rgba(237,28,53,.4),transparent),
-    linear-gradient(145deg,#333,#171717);
-  display: grid;
-  place-items: center;
-  font-size: 48px;
-  color: #fff;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
 .portfolio-info { padding: 20px; }
 
 .portfolio-info h3 { font-size: 17px; }
