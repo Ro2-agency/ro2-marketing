@@ -586,7 +586,8 @@ soundBtn.addEventListener("click", function () {
 <main>
 
 <!-- HERO -->
-<video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
+<div class="hero">
+  <video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
     <source src="1109%20(1)%20(1).mp4" type="video/mp4">
 </video>
 
@@ -1235,6 +1236,21 @@ tabs.forEach(tab => {
   });
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const heroVideo = document.getElementById("heroVideo");
+    const soundBtn = document.getElementById("videoSoundBtn");
 
+    if (!heroVideo || !soundBtn) return;
+
+    soundBtn.addEventListener("click", function () {
+        heroVideo.muted = !heroVideo.muted;
+
+        soundBtn.textContent = heroVideo.muted
+            ? "🔇 تشغيل الصوت"
+            : "🔊 كتم الصوت";
+    });
+});
+</script>
 </body>
 </html>
