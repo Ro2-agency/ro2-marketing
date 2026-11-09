@@ -273,12 +273,16 @@ section { padding: 100px 0; }
 }
 
 .portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
+    column-count: 3;
+    column-gap: 18px;
+    width: 100%;
 }
 
 .portfolio-card {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    break-inside: avoid;
     background: transparent;
     border-radius: 0;
     overflow: visible;
