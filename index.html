@@ -335,42 +335,19 @@ section { padding: 100px 0; }
 }
 
 .portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
+    column-count: 3;
+    column-gap: 20px;
+    width: 100%;
 }
 
 .portfolio-card {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 20px;
+    break-inside: avoid;
     background: transparent;
     border-radius: 0;
     overflow: visible;
-}
-
-.portfolio-card[hidden] { display: none; }
-
-
-
-.portfolio-card {
-    width: 100%;
-    align-self: start;
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
-    align-items: start;
-}
-
-.portfolio-card {
-    width: 100%;
-    background: transparent;
-    border-radius: 0;
-    overflow: visible;
-}
-
-.portfolio-card[hidden] {
-    display: none;
 }
 
 .portfolio-image {
@@ -536,9 +513,13 @@ footer {
   .nav { padding: 15px 0; flex-direction: column; }
   nav { justify-content: center; gap: 12px; }
   .about-grid, .contact-box { grid-template-columns: 1fr; }
-  .services-grid, .sectors-grid, .portfolio-grid, .results-grid {
+.services-grid, .sectors-grid, .results-grid {
     grid-template-columns: repeat(2,1fr);
-  }
+}
+
+.portfolio-grid {
+    column-count: 2;
+}
   .steps { grid-template-columns: repeat(2,1fr); }
 }
 
