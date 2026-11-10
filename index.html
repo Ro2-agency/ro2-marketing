@@ -278,26 +278,23 @@ section { padding: 100px 0; }
 
 .stat small { color: #aaa; }
 
-.services-grid, .sectors-grid, .results-grid,
-.stats, .why-grid, .steps {
-    grid-template-columns: 1fr;
+.services-grid, .sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 17px;
 }
 
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
-    width: 100%;
-    align-items: stretch;
+.service, .sector {
+  background: var(--dark);
+  border: 1px solid var(--border);
+  padding: 28px;
+  border-radius: 8px;
+  transition: .25s;
 }
 
-.portfolio-card {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 0;
-    overflow: hidden;
-    background: transparent;
+.service:hover, .sector:hover {
+  border-color: var(--red);
+  transform: translateY(-5px);
 }
 
 .service-number {
@@ -338,32 +335,63 @@ section { padding: 100px 0; }
 }
 
 .portfolio-grid {
-    column-count: 2 !important;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
 }
 
 .portfolio-card {
-    display: inline-block;
-    width: 100%;
-    margin: 0 0 20px;
-    break-inside: avoid;
     background: transparent;
     border-radius: 0;
     overflow: visible;
 }
 
+.portfolio-card[hidden] { display: none; }
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+.portfolio-card {
+    width: 100%;
+    align-self: start;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+.portfolio-card {
+    width: 100%;
+    background: transparent;
+    border-radius: 0;
+    overflow: visible;
+}
+
+.portfolio-card[hidden] {
+    display: none;
+}
+
 .portfolio-image {
     width: 100%;
-    height: 280px;
-    overflow: hidden;
+    height: auto;
+    min-height: 0;
+    background: transparent;
+    overflow: visible;
     display: block;
 }
 
 .portfolio-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    height: auto;
     display: block;
+    object-fit: contain;
 }
 }<article class="portfolio-card" data-category="design">
     <div class="portfolio-image">
@@ -509,34 +537,23 @@ footer {
   flex-wrap: wrap;
 }
 
-@media(max-width:800px) {.portfolio-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-}
+@media(max-width:800px) {
   .nav { padding: 15px 0; flex-direction: column; }
   nav { justify-content: center; gap: 12px; }
   .about-grid, .contact-box { grid-template-columns: 1fr; }
-.services-grid, .sectors-grid, .results-grid {
+  .services-grid, .sectors-grid, .portfolio-grid, .results-grid {
     grid-template-columns: repeat(2,1fr);
+  }
+  .steps { grid-template-columns: repeat(2,1fr); }
 }
 
-.portfolio-grid {
-    display: block !important;
-    width: 100%;
-    column-count: 3 !important;
-    column-gap: 20px;
-    column-fill: balance;
+@media(max-width:520px) {
+  section { padding: 70px 0; }
+  .services-grid, .sectors-grid, .portfolio-grid, .results-grid,
+  .stats, .why-grid, .steps { grid-template-columns: 1fr; }
+  .hero { min-height: 570px; }
 }
-
-.portfolio-card {
-    display: inline-block !important;
-    width: 100%;
-    margin: 0 0 20px;
-    break-inside: avoid;
-    vertical-align: top;
-}
-
-
-}</style>
+</style>
 </head>
 <script>
 const heroVideo = document.getElementById("heroVideo");
