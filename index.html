@@ -278,10 +278,13 @@ section { padding: 100px 0; }
 
 .stat small { color: #aaa; }
 
-.services-grid, .sectors-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 17px;
+.services-grid, .sectors-grid, .results-grid,
+.stats, .why-grid, .steps {
+    grid-template-columns: 1fr;
+}
+
+.portfolio-grid {
+    column-count: 1 !important;
 }
 
 .service, .sector {
