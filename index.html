@@ -553,7 +553,15 @@ footer {
   .stats, .why-grid, .steps { grid-template-columns: 1fr; }
   .hero { min-height: 570px; }
 }
-</style>
+/* PORTFOLIO DESKTOP FIX */
+@media (min-width: 801px) {
+    .portfolio-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        width: 100% !important;
+        gap: 20px;
+    }
+}</style>
 </head>
 <script>
 const heroVideo = document.getElementById("heroVideo");
