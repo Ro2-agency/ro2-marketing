@@ -335,9 +335,7 @@ section { padding: 100px 0; }
 }
 
 .portfolio-grid {
-    column-count: 3;
-    column-gap: 20px;
-    width: 100%;
+    column-count: 2 !important;
 }
 
 .portfolio-card {
@@ -518,16 +516,19 @@ footer {
 }
 
 .portfolio-grid {
-    column-count: 2;
-}
-  .steps { grid-template-columns: repeat(2,1fr); }
+    display: block !important;
+    width: 100%;
+    column-count: 3 !important;
+    column-gap: 20px;
+    column-fill: balance;
 }
 
-@media(max-width:520px) {
-  section { padding: 70px 0; }
-  .services-grid, .sectors-grid, .portfolio-grid, .results-grid,
-  .stats, .why-grid, .steps { grid-template-columns: 1fr; }
-  .hero { min-height: 570px; }
+.portfolio-card {
+    display: inline-block !important;
+    width: 100%;
+    margin: 0 0 20px;
+    break-inside: avoid;
+    vertical-align: top;
 }
 
 
