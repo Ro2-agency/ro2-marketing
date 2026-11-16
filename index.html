@@ -41,10 +41,55 @@
 
 @media(max-width:850px){.links{display:none}.heroGrid{grid-template-columns:1fr}.services{grid-template-columns:repeat(2,1fr)}.projects{grid-template-columns:repeat(2,1fr)}.pricing{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){section{padding:55px 0}.services,.projects,.pricing,.videoGrid,.contactGrid{grid-template-columns:1fr}.clients{grid-template-columns:1fr 1fr}.brand{display:block}.strip{justify-content:flex-start}.hero{padding:50px 0}.heroBox{min-height:300px}.price.featured{order:-1}}
+
+/* RO2 Medical — cinematic dark hero */
+.top{background:rgba(5,8,18,.96);border-bottom:1px solid rgba(255,255,255,.09);color:#fff}
+.top .logo small{color:#aeb4c3}.top .links{color:#e7e9ef}.top .btn{box-shadow:0 8px 25px #d9233233}
+.hero-dark{position:relative;isolation:isolate;min-height:690px;padding:0;overflow:hidden;background:#050916;color:#fff;display:flex;align-items:center}
+.hero-slides,.hero-shade{position:absolute;inset:0;z-index:-2}
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.35s ease}
+.hero-slide.active{opacity:1}
+.hero-slide img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(100%) brightness(.52) contrast(1.08);transform:scale(1.025);animation:heroZoom 9s ease-in-out infinite alternate}
+.hero-slide:nth-child(2) img{object-position:center 35%}.hero-slide:nth-child(3) img{object-position:center 45%}
+.hero-shade{z-index:-1;background:linear-gradient(90deg,rgba(3,7,17,.48),rgba(3,7,17,.76) 48%,rgba(3,7,17,.94)),linear-gradient(0deg,#050916 0%,transparent 34%,rgba(4,8,20,.24) 100%)}
+.hero-content{width:min(1160px,92%);min-height:690px;display:flex;flex-direction:column;justify-content:center;padding-top:65px;padding-bottom:25px}
+.hero-copy{max-width:780px;margin-right:auto;text-align:right}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:9px 15px;border:1px solid #ffffff26;background:#ffffff0d;border-radius:30px;color:#f5f6fa;font-size:12px;font-weight:bold;letter-spacing:.3px;backdrop-filter:blur(10px)}
+.hero-eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--r);box-shadow:0 0 14px var(--r)}
+.hero-label{display:block;margin-top:34px;color:#ff7b84;font-size:14px;font-weight:bold}
+.hero-dark h1{color:#fff;font-size:clamp(42px,6vw,76px);line-height:1.18;margin:12px 0 20px;font-weight:900}
+.hero-dark h1 em{color:#fff;text-shadow:0 3px 28px #000}
+.hero-lead{color:#d0d4df;font-size:clamp(16px,1.5vw,19px);line-height:1.9;max-width:700px;margin:0 0 28px}
+.hero-actions{display:flex;align-items:center;gap:13px;flex-wrap:wrap}
+.hero-actions .btn{padding:13px 25px;border-radius:12px}
+.hero-outline{display:inline-block;padding:12px 24px;border:1px solid #ffffff55;color:#fff;border-radius:12px;background:#ffffff0c;font-weight:bold;backdrop-filter:blur(8px)}
+.hero-outline:hover{background:#fff;color:#111}
+.hero-bottom{position:absolute;bottom:24px;left:0;right:0;border-top:1px solid #ffffff25;padding-top:16px;display:flex;justify-content:space-between;align-items:center;color:#aeb5c5;font-size:11px;letter-spacing:1px}
+.hero-dots{display:flex;gap:7px}.hero-dots b{width:7px;height:7px;border-radius:9px;background:#ffffff55;transition:.3s}.hero-dots b.active{width:25px;background:var(--r)}
+@keyframes heroZoom{from{transform:scale(1.025)}to{transform:scale(1.09)}}
+.strip{background:#fff}
+@media(max-width:760px){.top{position:relative}.top .links{display:none}.nav{height:68px}.hero-dark,.hero-content{min-height:650px}.hero-content{padding-top:55px;padding-bottom:75px}.hero-copy{margin:0;width:100%}.hero-dark h1{font-size:clamp(38px,10vw,54px)}.hero-lead{font-size:16px}.hero-shade{background:linear-gradient(90deg,rgba(3,7,17,.72),rgba(3,7,17,.88)),linear-gradient(0deg,#050916 0%,transparent 70%)}.hero-bottom{bottom:18px;font-size:9px}.hero-eyebrow{font-size:10px}}
 </style></head><body>
 <header class="top"><div class="wrap nav"><a class="logo" href="#home">RO<b>2</b><small>MEDICAL</small></a><nav class="links"><a href="#about">عن RO2</a><a href="#services">خدماتنا</a><a href="#work">أعمالنا</a><a href="#videos">الفيديوهات</a><a href="#bts">الكواليس</a><a href="#pricing">الباقات</a><a href="#reviews">الآراء</a><a href="#contact">تواصل معنا</a></nav><a class="btn" href="#contact">ابدأ معانا</a></div></header>
 <main>
-<section class="hero" id="home"><div class="wrap heroGrid"><div><span class="tag">وكالة متخصصة في التسويق الطبي</span><h1>خلّي اسمك الطبي<br><em>علامة يثق فيها المرضى</em></h1><p class="lead">بنساعد الدكاترة والعيادات في مصر يبنوا حضور رقمي احترافي من خلال محتوى طبي مميز، تصوير احترافي، وإعلانات مدروسة تساعد على الوصول للمرضى المناسبين.</p><a class="btn" href="#contact">اطلب استشارة تسويقية ←</a> <a class="btn alt" href="#work">شوف أعمالنا</a></div><div class="heroBox"><div>RO2 MEDICAL / GROWTH PARTNER</div><h2>تسويق طبي<br><strong>بفكر مختلف.</strong></h2><div class="mini">محتوى + تصوير + إعلانات</div></div></div></section>
+<section class="hero hero-dark" id="home">
+<div class="hero-slides" aria-hidden="true">
+  <div class="hero-slide active"><img src="media/hero/hero-1.jpg" alt=""></div>
+  <div class="hero-slide"><img src="media/hero/hero-2.jpg" alt=""></div>
+  <div class="hero-slide"><img src="media/hero/hero-3.jpg" alt=""></div>
+</div>
+<div class="hero-shade"></div>
+<div class="hero-content wrap">
+  <div class="hero-copy">
+    <span class="hero-eyebrow"><i></i> RO2 MEDICAL · SPECIALIZED MEDICAL MARKETING</span>
+    <span class="hero-label">وكالة متخصصة في التسويق الطبي</span>
+    <h1>خلّي اسمك الطبي<br><em>علامة يثق فيها المرضى</em></h1>
+    <p class="hero-lead">بنساعد الدكاترة والعيادات في مصر يبنوا حضور رقمي احترافي من خلال محتوى طبي مميز، تصوير احترافي، وإعلانات مدروسة تساعد على الوصول للمرضى المناسبين.</p>
+    <div class="hero-actions"><a class="btn" href="#contact">اطلب استشارة تسويقية ←</a><a class="hero-outline" href="#work">شوف أعمالنا</a></div>
+  </div>
+  <div class="hero-bottom"><span>CONTENT · PRODUCTION · PERFORMANCE</span><span>نحو حضور طبي أقوى</span><div class="hero-dots"><b class="active"></b><b></b><b></b></div></div>
+</div>
+</section>
 <div class="wrap strip"><span>✓ فهم لطبيعة المجال الطبي</span><span>✓ محتوى وتصوير احترافي</span><span>✓ إدارة حملات إعلانية</span><span>✓ متابعة وتقارير واضحة</span></div>
 <section id="about"><div class="wrap"><span class="kicker">عن RO2 MEDICAL</span><h2>مش بننشر محتوى وخلاص…<br>بنشتغل على نمو البراند الطبي.</h2><p class="intro">بنبدأ بفهم تخصصك والجمهور اللي بتستهدفه، وبعدها بنبني خطة تجمع بين المحتوى، الصورة الاحترافية، والإعلانات؛ علشان كل خطوة يكون ليها هدف واضح.</p></div></section>
 <section class="soft" id="services"><div class="wrap"><span class="kicker">خدماتنا</span><h2>كل اللي محتاجه لتسويق طبي متكامل</h2><p class="intro">خدمات مترابطة بتخدم حضور الدكتور والعيادة، من أول بناء الهوية لحد إدارة الحملات ومتابعة النتائج.</p><div class="services">
@@ -101,4 +146,9 @@
 <script>
 document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.project').forEach(p=>p.hidden=!(b.dataset.filter==='all'||p.dataset.category===b.dataset.filter))}));
 document.getElementById('lead').addEventListener('submit',e=>{e.preventDefault();const whatsapp='201017356781';const msg=`مرحبًا RO2 Medical\nالاسم: ${document.getElementById('n').value}\nالتخصص: ${document.getElementById('s').value}\nرقم التواصل: ${document.getElementById('p').value}\nالعيادة: ${document.getElementById('c').value}\nالتفاصيل: ${document.getElementById('m').value}`;window.open('https://wa.me/'+whatsapp+'?text='+encodeURIComponent(msg),'_blank')});
+
+let heroIndex=0;
+const heroSlides=[...document.querySelectorAll('.hero-slide')];
+const heroDots=[...document.querySelectorAll('.hero-dots b')];
+if(heroSlides.length>1){setInterval(()=>{heroSlides[heroIndex].classList.remove('active');heroDots[heroIndex]?.classList.remove('active');heroIndex=(heroIndex+1)%heroSlides.length;heroSlides[heroIndex].classList.add('active');heroDots[heroIndex]?.classList.add('active')},5500)}
 </script></body></html>
