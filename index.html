@@ -69,6 +69,93 @@
 @keyframes heroZoom{from{transform:scale(1.025)}to{transform:scale(1.09)}}
 .strip{background:#fff}
 @media(max-width:760px){.top{position:relative}.top .links{display:none}.nav{height:68px}.hero-dark,.hero-content{min-height:650px}.hero-content{padding-top:55px;padding-bottom:75px}.hero-copy{margin:0;width:100%}.hero-dark h1{font-size:clamp(38px,10vw,54px)}.hero-lead{font-size:16px}.hero-shade{background:linear-gradient(90deg,rgba(3,7,17,.72),rgba(3,7,17,.88)),linear-gradient(0deg,#050916 0%,transparent 70%)}.hero-bottom{bottom:18px;font-size:9px}.hero-eyebrow{font-size:10px}}
+
+/* أقسام عرض الأعمال والفيديوهات والكواليس بالهوية الداكنة */
+#work,
+#videos,
+#bts{
+  background:
+    radial-gradient(ellipse at 15% 10%, rgba(217,35,50,.09), transparent 38%),
+    linear-gradient(145deg,#080b13 0%,#0c1220 52%,#070a11 100%);
+  color:#fff;
+  border-top:1px solid rgba(255,255,255,.045);
+  border-bottom:1px solid rgba(255,255,255,.045);
+}
+#work h2,#videos h2,#bts h2{color:#fff}
+#work .intro,#videos .intro,#bts .intro{color:#aeb8ca}
+#work .kicker,#videos .kicker,#bts .kicker{color:#ff5965}
+#work .note,#videos .note,#bts .note{color:#8d98ac}
+#work .work-wall:before,#bts.work-wall:before{
+  color:rgba(217,35,50,.075);
+}
+#work .media-card,#videos .media-card{
+  background:#101725;
+  border:1px solid #263247;
+  box-shadow:0 14px 36px rgba(0,0,0,.24);
+}
+#work .media-frame,#videos .media-frame{
+  background:#080e19;
+}
+#work .media-frame img,#work .media-frame video,
+#videos .media-frame img,#videos .media-frame video{
+  background:#080e19;
+}
+#work .media-placeholder,#videos .media-placeholder{
+  color:#aeb8ca;
+  background:linear-gradient(145deg,#111b2b,#0a101b);
+}
+#work .media-meta,#videos .media-meta{color:#fff}
+#work .media-meta span,#videos .media-meta span{color:#9ba8bd}
+#work .filter{
+  color:#d5dbea;
+  background:#111a29;
+  border-color:#2a3549;
+}
+#work .filter.active{
+  background:var(--r);
+  color:#fff;
+  border-color:var(--r);
+}
+#bts .bts-item{
+  background:#101725;
+  border:1px solid #263247;
+  box-shadow:0 12px 28px rgba(0,0,0,.22);
+}
+#bts .bts-item .media-placeholder{
+  color:#aeb8ca;
+  background:linear-gradient(145deg,#172235,#0a101b);
+}
+
+
+/* تمييز باقة النمو 15,000 جنيه بالأسود */
+#pricing .price.featured{
+  background:linear-gradient(150deg,#080b12 0%,#111827 100%);
+  color:#fff;
+  border:1px solid rgba(217,35,50,.75);
+  box-shadow:0 18px 48px rgba(0,0,0,.22),0 0 0 1px rgba(217,35,50,.12);
+}
+#pricing .price.featured h3,
+#pricing .price.featured .amount,
+#pricing .price.featured p,
+#pricing .price.featured .list,
+#pricing .price.featured .list li{color:#fff}
+#pricing .price.featured .amount small{color:#b7c0d0}
+#pricing .price.featured .count{
+  background:#1a2434;
+  border:1px solid #2a3548;
+}
+#pricing .price.featured .count span{color:#c0cada}
+#pricing .price.featured .count b{color:#ff5965}
+#pricing .price.featured .btn{
+  background:var(--r);
+  color:#fff;
+  border-color:var(--r);
+}
+#pricing .price.featured .popular{
+  background:var(--r);
+  color:#fff;
+}
+
 </style></head><body>
 <header class="top"><div class="wrap nav"><a class="logo" href="#home">RO<b>2</b><small>MEDICAL</small></a><nav class="links"><a href="#about">عن RO2</a><a href="#services">خدماتنا</a><a href="#work">أعمالنا</a><a href="#videos">الفيديوهات</a><a href="#bts">الكواليس</a><a href="#pricing">الباقات</a><a href="#reviews">الآراء</a><a href="#contact">تواصل معنا</a></nav><a class="btn" href="#contact">ابدأ معانا</a></div></header>
 <main>
